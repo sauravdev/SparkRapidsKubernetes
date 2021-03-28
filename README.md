@@ -52,9 +52,6 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
-Label the node
-
-`kubectl label node worker01=worker`
 
 ## Step 5 - Deploy Pod Network to Cluster
 A Pod Network is a way to allow communication between different nodes in the cluster. This tutorial uses the flannel virtual network.
@@ -109,6 +106,7 @@ mkdir -p /spark-3.1.1-bin-hadoop3.2/usecase/mortgage_parquet_gpu/output
 tar xfvz /mortgage_2000.tgz --directory /spark-3.1.1-bin-hadoop3.2/usecase/tables/mortgage
 cp rapids-4-spark_2.12-0.4.1.jar spark-3.1.1-bin-hadoop3.2/jars/
 ```
+Also download Dockerfile.cuda and mortgage_etl.py from this repository.
 
 Create your Docker image.
 
