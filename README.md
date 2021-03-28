@@ -1,13 +1,15 @@
-# SparkRapidsKubernetes
+# Spark + Rapids on Kubernetes Deployment
 
 ## Step 1 - Install NVIDIA Drivers
 
+```
 sudo apt-get update
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt install nvidia-driver-440
 sudo apt install nvidia-cuda-toolkit
 sudo reboot
 nvidia-smi
+```
 
 ## Step 2 - Install Docker
 
