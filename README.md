@@ -159,7 +159,7 @@ kubectl create clusterrolebinding spark-role --clusterrole=edit --serviceaccount
 Launch Spark job
 
 ```
-bin/pyspark \
+bin/spark-submit \
 --master k8s://https://<IP>:6443 \
 --deploy-mode cluster \
 --conf spark.rapids.sql.concurrentGpuTasks=1 \
